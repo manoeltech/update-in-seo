@@ -1,6 +1,11 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.instagram.com/manoel.odesigner/"
 
+add articles_path, :priority => 0.7, :changefreq => 'daily'
+Article.all.each do |article|
+  add article_path(article), :lastmod => article.updated_at
+end
+
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
