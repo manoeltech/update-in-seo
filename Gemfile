@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'friendly_id', '~> 5.2.4'
 gem 'meta-tags'
+gem 'sitemap_generator'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
